@@ -24,8 +24,8 @@ An end-to-end MLOps pipeline that classifies medical symptom descriptions into
 
 ```
 HuggingFace Hub                     Amazon S3 (central storage)
-  ├── Dataset ──────────────────────────────────────┐
-  └── Bio_ClinicalBERT ──────────────────┐          │
+  ├── Dataset ───────────────────────────────────────┐
+  └── Bio_ClinicalBERT ───────────────────┐          │
                                           │          │
                               ┌───────────┴──────────┴─────────────┐
                               │     SageMaker Pipelines (CI/CD)    │
@@ -56,9 +56,9 @@ HuggingFace Hub                     Amazon S3 (central storage)
                                     ┌────┘
                          ┌──────────▼──────────┐   ┌──────────────────┐
                          │   Model Monitor     │──▶│  CloudWatch +    │
-                         │  (hourly drift check)│   │  EventBridge     │
+                         │ (hourly drift check)│   │  EventBridge     │
                          └─────────────────────┘   │  (auto-retrain)  │
-                                                    └──────────────────┘
+                                                   └──────────────────┘
                                          │
                               ┌──────────▼──────────┐
                               │    Gradio Demo      │ (web interface)
