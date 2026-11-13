@@ -40,7 +40,7 @@ HuggingFace Hub                     Amazon S3 (central storage)
                               │  │ Training     │ ml.g4dn.xlarge   │
                               │  │ Job          │ (GPU)            │
                               │  └──────────────┘                  │
-                              └─────────────────────────────────────┘
+                              └────────────────────────────────────┘
                                          │
                               ┌──────────▼──────────┐
                               │   MLflow Tracking   │ (experiment comparison)
